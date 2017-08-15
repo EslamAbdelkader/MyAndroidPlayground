@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/permissionsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/description"
+        android:layout_marginTop="20dp">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@color/colorAccent"
+            android:id="@+id/icon"/>
+
+        <TextView
+            android:layout_toRightOf="@id/icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/title"
+            android:textColor="#ffffff"
+            android:layout_marginLeft="10dp"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:text="Telefono"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/body"
+            android:layout_below="@id/title"
+            android:layout_toRightOf="@id/icon"
+            android:layout_marginLeft="10dp"
+            android:textColor="#ffffff"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ornare erat at quam placerat pretium. Morbi finibus non metus euismod consectetur. Nullam ornare erat at quam placerat pretium. Morbi finibus non metus euismod consectetur."/>
+
+    </RelativeLayout>
+</RelativeLayout>

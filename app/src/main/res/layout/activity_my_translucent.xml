@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.eslam.myplayground.MyTranslucentActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="74dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:gravity="center"
+        android:text="Mi Vodafone"
+        android:textColor="#ffffff"
+        android:textSize="27sp"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="120dp"
+        android:alpha="0.55"
+        android:background="#000000"
+        android:paddingBottom="24dp">
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="29dp"
+            android:layout_marginRight="29dp"
+            android:layout_marginTop="27dp"
+            android:layout_marginStart="29dp"
+            android:layout_marginBottom="167dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:gravity="left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="¿Qué necesitas saber antes de empezar a hacer uso de la App  Mi Vodafone?"
+                    android:layout_marginEnd="50dp"
+                    android:textStyle="bold"
+                    android:layout_alignParentStart="true"
+                    android:textSize="20sp"
+                    android:textColor="#ffff"
+                    android:id="@+id/header"/>
+
+
+                <TextView
+                    android:gravity="left"
+                    android:id="@+id/description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/header"
+                    android:layout_marginTop="20dp"
+                    android:text="Para poder garantizar la calidad de nuestra Red 4G, la App Mi Vodafone podrá hacer uso de los siguientes permisos de tu teléfono:"
+                    android:layout_marginEnd="50dp"
+                    android:layout_alignParentStart="true"
+                    android:textSize="15sp"
+                    android:textColor="#ffffff"/>
+
+                <LinearLayout
+                    android:id="@+id/permissionsLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/description"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="20dp">
+<!--
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@color/colorAccent"
+                        android:id="@+id/icon1"/>
+
+                    <TextView
+                        android:layout_toRightOf="@id/icon1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/title1"
+                        android:textColor="#ffffff"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:text="Telefono"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/permissionBody1"
+                        android:layout_below="@id/title1"
+                        android:layout_toRightOf="@id/icon1"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="#ffffff"
+                        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ornare erat at quam placerat pretium. Morbi finibus non metus euismod consectetur. Nullam ornare erat at quam placerat pretium. Morbi finibus non metus euismod consectetur."/>
+-->
+
+                </LinearLayout>
+
+
+
+            </RelativeLayout>
+
+
+        </ScrollView>
+
+        <Button
+            android:id="@+id/button"
+            android:paddingRight="14dp"
+            android:paddingLeft="14dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:text="Entendio"
+            android:textAllCaps="false"
+            android:layout_alignParentBottom="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="By tapping ‘OK’ you allow Vodafone to collect and use your information as stated in Settings, and agree to the App Privacy Supplement and T&amp;Cs."
+            android:id="@+id/footer"
+            android:textColorLink="#ffffff"
+            android:textColor="#ffffff"
+            android:paddingRight="29dp"
+            android:paddingLeft="29dp"
+            android:textSize="13.4sp"
+            android:layout_above="@id/button"
+            android:layout_marginBottom="20dp"/>
+    </RelativeLayout>
+
+</RelativeLayout>
