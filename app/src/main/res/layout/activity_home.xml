@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.eslam.myplayground.HomeActivity">
+
+<android.support.constraint.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Home Activity"
+        android:id="@+id/homeTitle"
+        android:textSize="50sp"
+        android:textStyle="bold|italic"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/titleGuideline"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <Button
+        android:id="@+id/animationActivityButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Animation Activity"
+        android:textAllCaps="false"
+        tools:layout_constraintRight_creator="1"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp" />
+
+    <Button
+        android:id="@+id/circleImageActivityButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Circle Image Activity"
+        android:textAllCaps="false"
+        app:layout_constraintTop_toBottomOf="@+id/animationActivityButton"
+        tools:layout_constraintRight_creator="1"
+        app:layout_constraintRight_toRightOf="@+id/animationActivityButton"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="@+id/animationActivityButton" />
+
+    <Button
+        android:id="@+id/fragmentsActivityButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Fragments Activity"
+        android:textAllCaps="false"
+        app:layout_constraintTop_toBottomOf="@+id/circleImageActivityButton"
+        tools:layout_constraintRight_creator="1"
+        app:layout_constraintRight_toRightOf="@+id/animationActivityButton"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="@+id/animationActivityButton" />
+
+    <Button
+        android:id="@+id/scrollToolbarActivityButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Scroll Toolbar Activity"
+        android:textAllCaps="false"
+        app:layout_constraintTop_toBottomOf="@+id/fragmentsActivityButton"
+        tools:layout_constraintRight_creator="1"
+        app:layout_constraintRight_toRightOf="@+id/circleImageActivityButton"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="@+id/circleImageActivityButton" />
+
+    <Button
+        android:id="@+id/spinnerActivityButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Spinner Activity"
+        android:textAllCaps="false"
+        app:layout_constraintTop_toBottomOf="@+id/scrollToolbarActivityButton"
+        tools:layout_constraintRight_creator="1"
+        app:layout_constraintRight_toRightOf="@+id/circleImageActivityButton"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="@+id/circleImageActivityButton" />
+
+    <Button
+        android:id="@+id/tabActivityButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Tab Activity"
+        android:textAllCaps="false"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerActivityButton"
+        tools:layout_constraintRight_creator="1"
+        app:layout_constraintRight_toRightOf="@+id/circleImageActivityButton"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="@+id/circleImageActivityButton" />
+
+    <Button
+        android:id="@+id/clockActivityButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Clock Activity"
+        android:textAllCaps="false"
+        app:layout_constraintTop_toBottomOf="@+id/tabActivityButton"
+        tools:layout_constraintRight_creator="1"
+        app:layout_constraintRight_toRightOf="@+id/circleImageActivityButton"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="@+id/circleImageActivityButton" />
+
+    <ImageView
+        android:transitionName="@string/transition_shared_element_0"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/mySharedImageView"
+        app:layout_constraintRight_toLeftOf="@+id/guideline4"
+        app:layout_constraintTop_toBottomOf="@+id/contentButton"
+        android:src="@drawable/ic_comment_24dp"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline4" />
+
+    <Button
+        android:layout_width="368dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        android:text="Content Test"
+        android:textAllCaps="false"
+        android:id="@+id/contentButton"
+        app:layout_constraintRight_toLeftOf="@+id/guideline4"
+        app:layout_constraintTop_toBottomOf="@+id/clockActivityButton"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline4" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/guideline"
+        app:layout_constraintGuide_percent="0.4"
+        tools:layout_editor_absoluteY="284dp"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/titleGuideline"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.3"
+        tools:layout_editor_absoluteY="219dp"
+        tools:layout_editor_absoluteX="0dp" />
+
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline4"
+        app:layout_constraintGuide_begin="192dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteY="25dp"
+        tools:layout_editor_absoluteX="192dp" />
+
+
+
+</android.support.constraint.ConstraintLayout>
+</android.support.v4.widget.NestedScrollView>

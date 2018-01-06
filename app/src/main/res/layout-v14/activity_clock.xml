@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context="com.example.eslam.myplayground.ClockActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="30dp">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Hours"
+            android:gravity="center"
+            android:inputType="number"
+            android:id="@+id/hrsEditText"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Minutes"
+            android:gravity="center"
+            android:inputType="number"
+            android:id="@+id/minsEditText"/>
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="Calculate Angle"
+        android:textAllCaps="false"
+        style="@android:style/Widget.Button"
+        android:id="@+id/calculateAngleButton"/>
+
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+
+    <com.example.eslam.myplayground.custom.Clock
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:id="@+id/myClock"/>
+
+</LinearLayout>

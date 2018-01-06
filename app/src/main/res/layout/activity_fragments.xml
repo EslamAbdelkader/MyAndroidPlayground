@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.eslam.myplayground.FragmentsActivity">
+
+    <Button
+        android:id="@+id/addFragmentButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Fragment"
+        android:textAllCaps="false"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/holo_red_light"
+        style="@style/Widget.AppCompat.Button.Colored"/>
+
+    <Button
+        android:id="@+id/addFragmentAndAddToBackStackButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Fragment + BackStack"
+        android:textAllCaps="false"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/holo_red_light"
+        style="@style/Widget.AppCompat.Button.Colored"/>
+
+    <Button
+        android:id="@+id/replaceFragmentButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Replace Fragment"
+        android:textAllCaps="false"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/holo_green_light"
+        style="@style/Widget.AppCompat.Button.Colored"/>
+
+    <Button
+        android:id="@+id/replaceAndAddToBackStackFragmentButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Replace Fragment + BackStack"
+        android:textAllCaps="false"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/holo_purple"
+        style="@style/Widget.AppCompat.Button.Colored"/>
+
+    <FrameLayout
+        android:id="@+id/fragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

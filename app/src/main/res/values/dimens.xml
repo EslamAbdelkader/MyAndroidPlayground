@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="vfg_tc_details_item_desc_margin_left">20dp</dimen>
+    <dimen name="vfg_tc_details_item_desc_margin_top">3dp</dimen>
+    <dimen name="vfg_tc_details_item_margin_bottom">20dp</dimen>
+    <dimen name="vfg_tc_details_card_horizontal_margin">15dp</dimen>
+    <dimen name="vfg_tc_details_card_margin_top">20dp</dimen>
+    <dimen name="vfg_tc_details_card_margin_bottom">15dp</dimen>
+    <dimen name="vfg_tc_details_layout_margin_end">26dp</dimen>
+    <dimen name="vfg_tc_details_layout_margin_start">14dp</dimen>
+    <dimen name="vfg_tc_details_view_margin_bottom">15dp</dimen>
+    <dimen name="vfg_tc_details_view_margin_top">12dp</dimen>
+    <dimen name="vfg_tc_details_view_height">1dp</dimen>
+    <dimen name="vfg_tc_details_copyrights_margin_top">18dp</dimen>
+    <dimen name="vfg_tc_details_card_elevation">1.5dp</dimen>
+    <dimen name="activity_horizontal_margin">10dp</dimen>
+</resources>

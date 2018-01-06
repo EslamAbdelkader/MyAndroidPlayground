@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorAccent"
-    tools:context="com.example.eslam.myplayground.MainActivity"
+    tools:context="com.example.eslam.myplayground.LandingPage.MainActivity"
     android:orientation="vertical">
 
     <ScrollView

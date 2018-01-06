@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Non focused states -->
+    <item android:state_selected="false"
+        android:drawable="@drawable/defualttab" />
+
+    <!-- Focused states (such as when focused with a d-pad or mouse hover) -->
+    <item  android:state_selected="true"
+        android:drawable="@drawable/vfg_tc_location" />
+</selector>

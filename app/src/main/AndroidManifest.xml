@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.eslam.myplayground">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,15 +11,43 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".LandingPage.MainActivity">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity
+            android:name=".LandingPage.MyTranslucentActivity"
+            android:theme="@style/Theme.AppCompat.Translucent" />
+        <activity android:name=".LandingPage.TcDetails.TcDetailsActivity">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity android:name=".AnimationActivity" />
+        <activity android:name=".ScrollToolbarActivity" />
+        <activity android:name=".CircleImageActivity" />
+        <activity android:name=".HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MyTranslucentActivity"
-            android:theme="@style/Theme.AppCompat.Translucent"></activity>
+        <activity android:name=".SpinnerActivity" />
+        <activity android:name=".SharedElementActivity" />
+        <activity android:name=".MyTabActivity" />
+        <activity android:name=".ClockActivity" />
+        <activity android:name=".FragmentsActivity"></activity>
     </application>
 
 </manifest>

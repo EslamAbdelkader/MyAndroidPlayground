@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_marginBottom="@dimen/vfg_tc_details_item_margin_bottom">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="1. License"
+        android:textSize="18sp"
+        android:id="@+id/tcItemTitle"
+        android:textColor="#000000"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Lorem ipsum dolor sit amet, consect etur adipiscing elit. Integer sit amet iaculis justo. Integer vestibulum."
+        android:textSize="16sp"
+        android:layout_marginLeft="@dimen/vfg_tc_details_item_desc_margin_left"
+        android:layout_marginTop="@dimen/vfg_tc_details_item_desc_margin_top"
+        android:textColor="#000000"
+        android:id="@+id/tcItemBody"/>
+
+</LinearLayout>

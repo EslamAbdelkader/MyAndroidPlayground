@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="vfg_tc_details_page_title">Terminos y Condiciones</string>
+    <string name="vfg_tc_details_copyrights">Copyright 2015 My Vodafone 5.0.1</string>
+    <string name="vfg_tc_details_item1_title">Licence</string>
+    <string name="vfg_tc_details_item1_description">Lorem ipsum dolor sit amet, consect etur adipiscing elit. Integer sit amet iaculis justo. Integer vestibulum.</string>
+    <string name="vfg_tc_details_item2_title">Charges</string>
+    <string name="vfg_tc_details_item2_description">When using this app you will not spend any of your data allowance.</string>
+    <string name="vfg_tc_details_item3_title">Exclusion of warranties and limitation of liability</string>
+    <string name="vfg_tc_details_item3_description">Aliquam lobortis rhoncus elit ac max imus. Nam vestibulum ipsum ut ligula lacinia, condimentum scelerisque dui.</string>
+    <string name="vfg_tc_details_item4_title">Lorem ipsum</string>
+    <string name="vfg_tc_details_item4_description">Aliquam lobortis rhoncus elit ac max imus. Nam vestibulum ipsum ut ligula lacinia, condimentum scelerisque dui.</string>
+    <string name="vfg_tc_details_item5_title">Lorem ipsum</string>
+    <string name="vfg_tc_details_item5_description">Aliquam lobortis rhoncus elit ac max imus. Nam vestibulum ipsum ut ligula lacinia, condimentum scelerisque dui.</string>
+</resources>
