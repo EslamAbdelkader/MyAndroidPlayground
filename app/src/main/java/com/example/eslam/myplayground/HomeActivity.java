@@ -1,10 +1,15 @@
 package com.example.eslam.myplayground;
 
+import android.Manifest;
 import android.app.ActivityOptions;
+import android.content.ContentResolver;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.provider.ContactsContract;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -28,6 +33,7 @@ public class HomeActivity extends AppCompatActivity {
     private final String HANDLER_TAG = "HANDLER-TAG";
     private final String RX_TAG = "RX-TAG";
     private final int REQUEST_CODE_ENABLE_ADMIN = 100;
+    private final int CONTACTS_PERMISSION_REQUEST_CODE = 1000;
     Queue<Observer> observers;
     Handler handler1;
     Handler handler2;
@@ -136,6 +142,14 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
+
+        findViewById(R.id.contentResolverButton).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                checkContactsPermissions();
+            }
+        });
+
         findViewById(R.id.contentButton).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -151,6 +165,29 @@ public class HomeActivity extends AppCompatActivity {
                 }).start();
             }
         });
+    }
+
+    private void testContentResolver() {
+        ContentResolver contentResolver = getContentResolver();
+        String[] projection = {ContactsContract.Contacts.DISPLAY_NAME};
+        Cursor cursor = contentResolver.query(ContactsContract.Contacts.CONTENT_URI,
+                projection,
+                null,
+                null,
+                null);
+        if (cursor.moveToFirst()) {
+            do {
+                String name = cursor.getString(0);
+                Log.i(getClass().getSimpleName(), name);
+            } while (cursor.moveToNext());
+        }
+        cursor.close();
+
+
+    }
+
+    private void checkContactsPermissions() {
+        requestPermissions(new String[]{Manifest.permission.READ_CONTACTS}, CONTACTS_PERMISSION_REQUEST_CODE);
     }
 
     private void factoryReset() {
@@ -270,5 +307,18 @@ public class HomeActivity extends AppCompatActivity {
         myClass.setName(Name.AHMED);
         String name = myClass.getName();
         Log.i(getClass().getSimpleName(), name);
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if (requestCode == CONTACTS_PERMISSION_REQUEST_CODE) {
+            for (int grantResult : grantResults) {
+                if (grantResult == PackageManager.PERMISSION_DENIED) {
+                    return;
+                }
+            }
+            testContentResolver();
+        }
     }
 }
