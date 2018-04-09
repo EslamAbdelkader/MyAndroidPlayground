@@ -78,4 +78,8 @@
     <string name="transition_shared_element_0">myFirstTransitionSharedElement</string>
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_standard">StandardActivity</string>
+    <string name="title_activity_single_top">SingleTopActivity</string>
+    <string name="title_activity_single_task">SingleTaskActivity</string>
+    <string name="title_activity_single_instance">SingleInstanceActivity</string>
 </resources>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.eslam.myplayground.LaunchModeActivity"
+    android:orientation="vertical"
+    android:paddingTop="100dp">
+    
+    <Button
+        android:id="@+id/standardActivityButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Standard Activity"
+        android:layout_margin="10dp"
+        android:textAllCaps="false"
+        style="@android:style/ButtonBar"/>
+
+
+    <Button
+        android:id="@+id/singleTopActivityButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Single Top Activity"
+        android:layout_margin="10dp"
+        android:textAllCaps="false"
+        style="@android:style/ButtonBar"/>
+
+
+    <Button
+        android:id="@+id/singleTaskActivityButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Single Task Activity"
+        android:layout_margin="10dp"
+        android:textAllCaps="false"
+        style="@android:style/ButtonBar"/>
+
+
+    <Button
+        android:id="@+id/singleInstanceActivityButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Single Instance Activity"
+        android:layout_margin="10dp"
+        android:textAllCaps="false"
+        style="@android:style/ButtonBar"/>
+
+</LinearLayout>

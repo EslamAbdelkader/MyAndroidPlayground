@@ -49,16 +49,42 @@
         <activity android:name=".ClockActivity" />
         <activity android:name=".FragmentsActivity" />
         <activity android:name=".RxActivity" />
-        <activity android:name=".GifActivity"></activity>
-        <receiver android:name=".WipeDataReceiver"
+        <activity android:name=".GifActivity" />
+
+        <receiver
+            android:name=".WipeDataReceiver"
             android:label="Label"
             android:permission="android.permission.BIND_DEVICE_ADMIN">
-            <meta-data android:name="android.app.device_admin"
+            <meta-data
+                android:name="android.app.device_admin"
                 android:resource="@xml/device_admin_sample" />
+
             <intent-filter>
                 <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
             </intent-filter>
         </receiver>
+
+        <activity android:name=".LaunchModeActivity" />
+        <activity
+            android:name=".launch_modes_activites.StandardActivity"
+            android:label="@string/title_activity_standard"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".launch_modes_activites.SingleTopActivity"
+            android:label="@string/title_activity_single_top"
+            android:launchMode="singleTop"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".launch_modes_activites.SingleTaskActivity"
+            android:label="@string/title_activity_single_task"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".launch_modes_activites.SingleInstanceActivity"
+            android:label="@string/title_activity_single_instance"
+            android:theme="@style/AppTheme"
+            android:launchMode="singleInstance"/>
     </application>
 
 </manifest>

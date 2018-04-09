@@ -129,6 +129,13 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
+        findViewById(R.id.launchModeActivityButton).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(HomeActivity.this, LaunchModeActivity.class));
+            }
+        });
+
         findViewById(R.id.contentButton).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
