@@ -27,6 +27,7 @@ import io.reactivex.schedulers.Schedulers;
 public class HomeActivity extends AppCompatActivity {
     private final String HANDLER_TAG = "HANDLER-TAG";
     private final String RX_TAG = "RX-TAG";
+    private final int REQUEST_CODE_ENABLE_ADMIN = 100;
     Queue<Observer> observers;
     Handler handler1;
     Handler handler2;
@@ -39,7 +40,6 @@ public class HomeActivity extends AppCompatActivity {
         getWindow().setAllowReturnTransitionOverlap(false);
         getWindow().setExitTransition(new Slide(Gravity.RIGHT));
         setContentView(R.layout.activity_home);
-
 //        testStringDef();
 //        testRX();
 //        testHandlers();
@@ -108,6 +108,27 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
+        findViewById(R.id.rxActivityButton).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(HomeActivity.this, RxActivity.class));
+            }
+        });
+
+        findViewById(R.id.gifActivityButton).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(HomeActivity.this, GifActivity.class));
+            }
+        });
+
+        findViewById(R.id.factoryResetButton).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                factoryReset();
+            }
+        });
+
         findViewById(R.id.contentButton).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -123,6 +144,19 @@ public class HomeActivity extends AppCompatActivity {
                 }).start();
             }
         });
+    }
+
+    private void factoryReset() {
+        /*DevicePolicyManager devicePolicyManager = (DevicePolicyManager) getSystemService(Context.DEVICE_POLICY_SERVICE);
+        ComponentName deviceAdmin = new ComponentName(this, WipeDataReceiver.class);
+        if (!devicePolicyManager.isAdminActive(deviceAdmin)) {
+            Intent intent = new Intent(DevicePolicyManager.ACTION_ADD_DEVICE_ADMIN);
+            intent.putExtra(DevicePolicyManager.EXTRA_DEVICE_ADMIN, deviceAdmin);
+            intent.putExtra(DevicePolicyManager.EXTRA_ADD_EXPLANATION, "Process will remove user installed applications, settings, wallpaper and sound settings. Are you sure you want to wipe device?");
+            startActivityForResult(intent, REQUEST_CODE_ENABLE_ADMIN);
+        } else {
+            devicePolicyManager.wipeData(0);
+        }*/
     }
 
     private void testHandlers() {

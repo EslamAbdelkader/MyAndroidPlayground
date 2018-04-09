@@ -47,7 +47,18 @@
         <activity android:name=".SharedElementActivity" />
         <activity android:name=".MyTabActivity" />
         <activity android:name=".ClockActivity" />
-        <activity android:name=".FragmentsActivity"></activity>
+        <activity android:name=".FragmentsActivity" />
+        <activity android:name=".RxActivity" />
+        <activity android:name=".GifActivity"></activity>
+        <receiver android:name=".WipeDataReceiver"
+            android:label="Label"
+            android:permission="android.permission.BIND_DEVICE_ADMIN">
+            <meta-data android:name="android.app.device_admin"
+                android:resource="@xml/device_admin_sample" />
+            <intent-filter>
+                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>

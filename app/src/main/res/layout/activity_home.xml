@@ -112,13 +112,51 @@
         tools:layout_constraintLeft_creator="1"
         app:layout_constraintLeft_toLeftOf="@+id/circleImageActivityButton" />
 
+    <Button
+        android:id="@+id/rxActivityButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="RX Activity"
+        android:textAllCaps="false"
+        app:layout_constraintTop_toBottomOf="@+id/contentButton"
+        tools:layout_constraintRight_creator="1"
+        app:layout_constraintRight_toRightOf="@+id/circleImageActivityButton"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="@+id/circleImageActivityButton" />
+
+
+    <Button
+        android:id="@+id/gifActivityButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Gif Activity"
+        android:textAllCaps="false"
+        app:layout_constraintTop_toBottomOf="@+id/rxActivityButton"
+        tools:layout_constraintRight_creator="1"
+        app:layout_constraintRight_toRightOf="@+id/circleImageActivityButton"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="@+id/circleImageActivityButton" />
+
+
+    <Button
+        android:id="@+id/factoryResetButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Factory Reset"
+        android:textAllCaps="false"
+        app:layout_constraintTop_toBottomOf="@+id/gifActivityButton"
+        tools:layout_constraintRight_creator="1"
+        app:layout_constraintRight_toRightOf="@+id/circleImageActivityButton"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="@+id/circleImageActivityButton" />
+
     <ImageView
         android:transitionName="@string/transition_shared_element_0"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:id="@+id/mySharedImageView"
         app:layout_constraintRight_toLeftOf="@+id/guideline4"
-        app:layout_constraintTop_toBottomOf="@+id/contentButton"
+        app:layout_constraintTop_toBottomOf="@+id/factoryResetButton"
         android:src="@drawable/ic_comment_24dp"
         app:layout_constraintLeft_toLeftOf="@+id/guideline4" />
 
@@ -139,8 +177,8 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:id="@+id/guideline"
-        app:layout_constraintGuide_percent="0.4"
         tools:layout_editor_absoluteY="284dp"
+        app:layout_constraintGuide_percent="0.18"
         tools:layout_editor_absoluteX="0dp" />
 
     <android.support.constraint.Guideline
@@ -148,7 +186,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/titleGuideline"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.3"
+        app:layout_constraintGuide_percent="0.1"
         tools:layout_editor_absoluteY="219dp"
         tools:layout_editor_absoluteX="0dp" />
 

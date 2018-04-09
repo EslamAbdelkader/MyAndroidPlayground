@@ -1,18 +1,20 @@
 package com.example.eslam.myplayground;
 
 import android.app.FragmentManager;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 public class FragmentsActivity extends AppCompatActivity {
 
+    private final String NUMBER_KEY = "number";
     private int number;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fragments);
+        number = savedInstanceState != null ? savedInstanceState.getInt(NUMBER_KEY) : 0;
         findViewById(R.id.addFragmentButton).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -64,5 +66,11 @@ public class FragmentsActivity extends AppCompatActivity {
                         .commit();
             }
         });
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putInt(NUMBER_KEY, number);
     }
 }
