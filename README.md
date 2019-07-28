@@ -1,2 +1,2 @@
-# MyPlayGround
-Nothing serious, just a playground for experimenting stuff
+# MyAndroidPlayground
+Experimenting and learning new stuff related to Android
